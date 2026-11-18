@@ -1,0 +1,4 @@
+{"slug": "lagos-cakes", "name": "Lagos Cakes", "description": "Custom celebration cakes, delivered in Lagos and Abuja.",
+ "capabilities": ["cake", "baking", "booking", "pricing"], "location": "Lagos, NG", "serves": ["Lagos", "Abuja"],
+ "base_price": 25000, "per_unit_price": 1500, "included_units": 10, "max_discount": 0.10,
+ "working_days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"], "booked_dates": [], "whatsapp": "2340000000002"}

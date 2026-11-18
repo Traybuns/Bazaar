@@ -1,0 +1,4 @@
+{"slug": "ada-photo", "name": "Ada Photography Abuja", "description": "Portrait, birthday and event photography in Abuja.",
+ "capabilities": ["photography", "booking", "pricing"], "location": "Abuja, NG", "serves": ["Abuja"],
+ "base_price": 90000, "per_unit_price": 0, "included_units": 1, "max_discount": 0.15,
+ "working_days": ["tue", "wed", "thu", "fri", "sat", "sun"], "booked_dates": [], "whatsapp": "2340000000001"}

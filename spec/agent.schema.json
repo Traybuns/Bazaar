@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Bazaar agent.json (v1)",
+  "type": "object",
+  "required": ["name", "id", "version", "capabilities", "location", "serves", "endpoints", "permissions", "cannot_do", "contact", "verification"],
+  "properties": {
+    "name": {"type": "string"},
+    "id": {"type": "string", "pattern": "^did:web:", "description": "did:web identifier for the agent"},
+    "version": {"type": "string"},
+    "description": {"type": "string"},
+    "capabilities": {"type": "array", "items": {"type": "string"}, "description": "e.g. photography, cake, makeup"},
+    "location": {"type": "string"},
+    "serves": {"type": "array", "items": {"type": "string"}, "description": "Cities the business works in"},
+    "price_range": {"type": "object", "properties": {"from": {"type": "integer"}, "currency": {"type": "string"}}},
+    "availability": {"type": "string", "format": "uri"},
+    "endpoints": {"type": "object", "required": ["quote", "book"], "properties": {"quote": {"type": "string"}, "book": {"type": "string"}}},
+    "contact": {"type": "object", "properties": {"whatsapp": {"type": "string"}}},
+    "permissions": {"type": "array", "items": {"type": "string"}, "not": {"contains": {"const": "charge-card"}}},
+    "cannot_do": {"type": "array", "items": {"type": "string"}},
+    "verification": {
+      "type": "object",
+      "required": ["alg", "public_key", "signature"],
+      "properties": {"alg": {"const": "ed25519"}, "public_key": {"type": "string"}, "signed_by": {"type": "string"}, "signature": {"type": "string", "description": "base64 ed25519 signature over the canonical JSON of this document without the signature field"}}
+    }
+  }
+}
